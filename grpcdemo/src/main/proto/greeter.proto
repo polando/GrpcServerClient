@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.milq.grpcdemo;
+
+
+
+service greeter {
+    rpc sayHi(hiRequest) returns (hiReply){}
+}
+
+message hiRequest{
+    string userName = 1;
+}
+
+message hiReply{
+    string greetingMessage = 1;
+}
